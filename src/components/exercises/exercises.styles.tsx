@@ -8,9 +8,9 @@ export const ExercisesContainer = styled.div`
   margin: 1rem auto;
   overflow-y: auto;
 
-  @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 600px) {
     height: 160vh;
-  }
+  } */
 
   h1 {
     text-transform: uppercase;
