@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.not-active {
+  display: none;
+}
+
+.todo-item {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  margin: auto 1rem;
+  font-size: 1.25rem;
+}
+
+.done span {
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.tick {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid rgb(36, 35, 34);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tick::before {
+  content: "\2713";
+  font-weight: bold;
+  font-size: 1rem;
+  display: none;
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.delete-todo {
+  border: 3px solid rgb(36, 35, 34);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: rgb(239, 150, 7);
+  font-size: 1.25rem;
+  outline: none;
+  cursor: pointer;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 3px solid rgb(36, 35, 34);
+  font-size: 1rem;
+}
+
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  opacity: 0.7;
+}
+
+.empty-state__title,
+.empty-state__description {
+  margin-bottom: 4rem;
+}
+
+.todo-list:empty {
+  display: none;
+}
+
+.todo-list:empty + .empty-state {
+  display: flex;
+}

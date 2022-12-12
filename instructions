@@ -1,0 +1,31 @@
+Treino A
+Exercicio (id 1)
+Exercicio (id 1) = {
+Repetiçōes: x
+Peso: x
+Intervalo: x
+}
+Exercicio (id 2)
+Exercicio (id 2) = {
+Repetiçōes: x
+Peso: x
+Intervalo: x
+}
+Exercicio (id 3)
+Exercicio (id 3) = {
+Repetiçōes: x
+Peso: x
+Intervalo: x
+}
+Exercicio (id 4)
+Exercicio (id 4) = {
+Repetiçōes: x
+Peso: x
+Intervalo: x
+}
+Treino B
+Treino C
+
+- Page with all the workouts. When the user click in one of the workouts, open the workout page.
+- Workout page is a list and the user have to check each exercise. When all the exercises in the list are checked, display "Well done!".
+- Exercise page has list of repetitions, weight and interval and the user can change the values, edit, save and delete it. The default is 0.
