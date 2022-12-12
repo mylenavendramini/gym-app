@@ -6,7 +6,6 @@ export const WorkoutContainer = styled.div`
   margin: 0 auto;
   padding: 2rem;
   height: auto;
-  margin: 1rem auto;
   overflow-y: auto;
 
   h1 {

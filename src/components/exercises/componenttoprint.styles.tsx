@@ -6,7 +6,6 @@ export const ExercisesContainer = styled.div`
   margin: 0 auto;
   padding: 2rem;
   height: auto;
-  margin: 1rem auto;
   overflow-y: auto;
 
   @media print {
@@ -103,4 +102,8 @@ export const ExercisesContainer = styled.div`
 export const ExercisesReady = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;

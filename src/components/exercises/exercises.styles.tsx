@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const ExercisesContainer = styled.div`
   width: 100%;
   max-width: 60rem;
-  margin: 0 auto;
   padding: 2rem;
   height: auto;
   margin: 1rem auto;
   overflow-y: auto;
+
+  @media only screen and (max-width: 600px) {
+    height: 160vh;
+  }
 
   h1 {
     text-transform: uppercase;
@@ -71,6 +74,10 @@ export const ExercisesContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     h3 {
       text-transform: uppercase;
       text-align: center;
@@ -97,5 +104,9 @@ export const ExercisesReady = styled.div`
   button,
   a {
     margin: auto auto auto 2rem;
+
+    @media only screen and (max-width: 600px) {
+      margin: 1rem;
+    }
   }
 `;
