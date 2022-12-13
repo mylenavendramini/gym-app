@@ -33,7 +33,7 @@ export const ExercisesContainer = styled.div`
     border-width: 0;
     box-shadow: none;
     box-sizing: border-box;
-    color: #ffffff;
+    color: #1d1b26;
     cursor: pointer;
     display: inline-flex;
     font-family: CircularStd, sans-serif;
@@ -88,6 +88,8 @@ export const ExercisesContainer = styled.div`
       width: 100%;
       border-radius: 4px;
       border: 1px solid rgb(40, 170, 255);
+      background-color: #1d1b26;
+      color: #ffffff;
       font-size: 1rem;
       padding: 0.5rem;
       margin: 1rem auto;

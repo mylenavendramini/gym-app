@@ -1,29 +1,30 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ContactContainer = styled.div`
   width: 100%;
   max-width: 60rem;
-  margin: 0 auto;
   padding: 2rem;
   height: auto;
+  margin: 1rem auto;
   overflow-y: auto;
+
+  /* @media only screen and (max-width: 600px) {
+    height: 160vh;
+  } */
 
   h1 {
     text-transform: uppercase;
     text-align: center;
     color: #3eb2fd;
-    margin-bottom: 5rem;
   }
 
   p {
-    text-align: justify;
+    text-align: center;
   }
 
-  li {
-    list-style: none;
-  }
-
+  button,
   a {
+    margin: auto;
     align-items: center;
     appearance: none;
     background-color: #3eb2fd;
@@ -53,15 +54,39 @@ export const Container = styled.div`
     white-space: nowrap;
   }
 
+  button:active,
   a:active,
+  button:focus,
   a:focus {
     outline: none;
   }
 
+  button:hover,
   a:hover {
     background-position: -20px -20px;
   }
+  button:focus:not(:active),
   a:focus:not(:active) {
     box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 0.125em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid rgb(40, 170, 255);
+      background-color: #1d1b26;
+      color: #ffffff;
+      font-size: 1rem;
+      padding: 0.5rem;
+      margin: 1rem auto;
+
+      &::placeholder {
+        color: #ffffff;
+      }
+    }
   }
 `;

@@ -12,10 +12,12 @@ export const WorkoutContainer = styled.div`
     text-transform: uppercase;
     text-align: center;
     color: #3eb2fd;
+    margin-bottom: 5rem;
   }
 
   p {
     text-align: center;
+    margin-top: 5rem;
   }
 
   ul,
@@ -35,7 +37,7 @@ export const WorkoutContainer = styled.div`
     border-width: 0;
     box-shadow: none;
     box-sizing: border-box;
-    color: #ffffff;
+    color: #1d1b26;
     cursor: pointer;
     display: inline-flex;
     font-family: CircularStd, sans-serif;

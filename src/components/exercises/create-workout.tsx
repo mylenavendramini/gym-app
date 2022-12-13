@@ -61,7 +61,7 @@ function CreateWorkout() {
     const exe = [...exercises];
     exe[index][target.name as keyof InputData] = Number(target.value);
     setExercises(exe);
-    console.log("exe: ", exe);
+    // console.log("exe: ", exe);
   };
 
   const handleChangeInputName = (
@@ -148,14 +148,15 @@ function CreateWorkout() {
         </div>
         <div className={isActive ? "active" : "not-active"}>
           <ExercisesReady>
+            <button onClick={toggleButton}>Go back</button>
+            <button onClick={handlePrint}>Convert to PDF</button>
             <ComponentToPrint
               ref={componentRef}
               exercises={exercises}
               setExercises={setExercises}
             />
-            <button onClick={handlePrint}>Convert to PDF</button>
-            <button>Send it to my email</button>
-            <Link to="/workouts">Go back to Workouts</Link>
+
+            {/* <button>Send it to my email</button> */}
           </ExercisesReady>
         </div>
       </ExercisesContainer>

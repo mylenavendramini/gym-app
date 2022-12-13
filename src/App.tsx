@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Contact from "./components/contact/contact";
 import Exercise from "./components/exercise/exercise";
 import CreateWorkout from "./components/exercises/create-workout";
 import Home from "./components/home/home";
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/create-workout" element={<CreateWorkout />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/workouts/*" element={<Work />}>
           <Route path=":workoutId" element={<WorkIn />}>
             <Route path=":exerciseId" element={<Exercise />} />

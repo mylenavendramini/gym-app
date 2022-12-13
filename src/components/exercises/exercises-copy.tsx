@@ -1,7 +1,7 @@
 import { ChangeEvent, useState, useRef } from "react";
 import { ExercisesContainer, ExercisesReady } from "./exercises.styles";
 import { getWorkout } from "../../gym.database";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { useReactToPrint } from "react-to-print";
 import ComponentToPrint from "./componenttoprint";
@@ -20,11 +20,6 @@ function ExercisesCopy() {
 
   const [exercises, setExercises] = useState<InputData[]>(workout!.exercises);
 
-  // When clicked at "save" button of each line, it will display the result in the "Wourkout of the day", line by line
-
-  // When clicked at "remove" button, the whole line will be removed
-  // When clicked at "reset", all the inputs will come back to the 0 state and the removed exercises will come back
-
   const handleChangeInput = (
     e: ChangeEvent<HTMLInputElement>,
     index: number
@@ -33,7 +28,7 @@ function ExercisesCopy() {
     const exe = [...exercises];
     exe[index][target.name as keyof InputData] = Number(target.value);
     setExercises(exe);
-    console.log("exe: ", exe);
+    // console.log("exe: ", exe);
   };
 
   const [isActive, setIsActive] = useState(false);
@@ -43,6 +38,7 @@ function ExercisesCopy() {
   };
 
   const componentRef = useRef(null);
+
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
@@ -100,14 +96,15 @@ function ExercisesCopy() {
         </div>
         <div className={isActive ? "active" : "not-active"}>
           <ExercisesReady>
+            <button onClick={toggleButton}>Go back</button>
+            <button onClick={handlePrint}>Convert to PDF</button>
             <ComponentToPrint
               ref={componentRef}
               exercises={exercises}
               setExercises={setExercises}
             />
-            <button onClick={handlePrint}>Convert to PDF</button>
-            <button disabled>Send it to my email</button>
-            <button onClick={toggleButton}>Go back</button>
+
+            {/* <button>Send it to my email</button> */}
           </ExercisesReady>
         </div>
       </ExercisesContainer>

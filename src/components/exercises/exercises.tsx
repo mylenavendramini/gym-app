@@ -62,7 +62,7 @@ function Exercises() {
     const exe = [...exercises];
     exe[index][target.name as keyof InputData] = Number(target.value);
     setExercises(exe);
-    console.log("exe: ", exe);
+    // console.log("exe: ", exe);
   };
 
   const [isActive, setIsActive] = useState(false);

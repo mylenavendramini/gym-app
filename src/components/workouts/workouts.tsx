@@ -7,10 +7,7 @@ function Workouts() {
   return (
     <WorkoutContainer>
       <h1>What workout for today?</h1>
-      <p>
-        We advise doing a workout for each day. For example, Monday - Workout A,
-        Tuesday - Workout B, and so on.
-      </p>
+
       {workouts.map(({ name, id }) => (
         <div key={id}>
           <ul>
@@ -24,6 +21,10 @@ function Workouts() {
       <li>
         <Link to="/create-workout">Create a workout</Link>
       </li>
+      <p>
+        We advise doing a workout for each day. For example, Monday - Workout A,
+        Tuesday - Workout B, and so on.
+      </p>
     </WorkoutContainer>
   );
 }
