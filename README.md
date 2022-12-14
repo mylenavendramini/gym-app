@@ -2,6 +2,8 @@
 
 **Ongoing**
 
+[View website](https://mygymworkoutapp.netlify.app/)
+
 An application where the user can choose a ready-made workout or include it own exercises. In both options, it can set the repetitions, weight and intervals and then convert it to PDF or send via email.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -37,6 +39,6 @@ REACT | TYPESCRIPT
 
 ##### Mylena Vendramini
 
-Take a look at my portfolio at www.mylenavendramini.com. 
+Take a look at my portfolio at www.mylenavendramini.com.
 
-You can find me on [Linkedin](https://www.linkedin.com/in/mylenavendramini/) and [Twitter](https://twitter.com/mmvendramini). 
+You can find me on [Linkedin](https://www.linkedin.com/in/mylenavendramini/) and [Twitter](https://twitter.com/mmvendramini).
