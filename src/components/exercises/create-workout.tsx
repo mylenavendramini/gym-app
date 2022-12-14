@@ -105,6 +105,7 @@ function CreateWorkout() {
                     name={`name`}
                     type="text"
                     id="name"
+                    placeholder="e.g Legpress"
                     value={exercises[index]["name"]}
                     onChange={(e) => handleChangeInputName(e, index)}
                     // ref={inputRef}
@@ -113,6 +114,10 @@ function CreateWorkout() {
                   <input
                     name={`repetitions`}
                     type="number"
+                    min="1"
+                    max="100"
+                    step="1"
+                    placeholder="0"
                     id="repetitions"
                     value={exercises[index]["repetitions"]}
                     onChange={(e) => handleChangeInput(e, index)}
@@ -123,6 +128,10 @@ function CreateWorkout() {
                   <input
                     name={`weight`}
                     type="number"
+                    min="0"
+                    max="500"
+                    step="1"
+                    placeholder="0"
                     id="weight"
                     value={exercises[index]["weight"]}
                     onChange={(e) => handleChangeInput(e, index)}
@@ -133,6 +142,10 @@ function CreateWorkout() {
                   <input
                     name={`interval`}
                     type="number"
+                    min="1"
+                    max="90"
+                    step="1"
+                    placeholder="0"
                     id="interval"
                     value={exercises[index]["interval"]}
                     onChange={(e) => handleChangeInput(e, index)}
