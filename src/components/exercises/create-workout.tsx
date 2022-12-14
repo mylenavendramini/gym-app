@@ -153,7 +153,7 @@ function CreateWorkout() {
             <ComponentToPrint
               ref={componentRef}
               exercises={exercises}
-              setExercises={setExercises}
+              // setExercises={setExercises}
             />
 
             {/* <button>Send it to my email</button> */}

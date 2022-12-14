@@ -2,8 +2,12 @@ import { ContactContainer } from "./contact.styles";
 import { FormEvent, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const Contact = (props: { exercises: [] }) => {
-  const exercises = props.exercises?.map(
+import { InputData } from "../types/index";
+export interface ContactProps {
+  exercises: InputData[];
+}
+const Contact = ({ exercises }: ContactProps) => {
+  const data = exercises?.map(
     ({ name, repetitions, weight, interval, id }, index) => {
       const str = ` Exercise ${index + 1}: ${name} |
        Repetitions: ${repetitions} |
@@ -64,7 +68,7 @@ const Contact = (props: { exercises: [] }) => {
               name="message"
               type="text"
               id="exercises"
-              value={exercises}
+              value={data}
               readOnly
               // value={toSend.message}
               // onChange={handleChange}
