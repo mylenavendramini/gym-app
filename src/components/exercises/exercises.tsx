@@ -1,4 +1,4 @@
-import { ChangeEvent, useState, useRef } from "react";
+import { ChangeEvent, useState, useRef, useEffect, WheelEvent } from "react";
 import { ExercisesContainer, ExercisesReady } from "./exercises.styles";
 import { getWorkout } from "../../gym.database";
 import { useParams } from "react-router-dom";
@@ -30,12 +30,14 @@ function Exercises() {
     setExercises(exe);
   };
 
+  // Open ComponentToPrint:
   const [isActive, setIsActive] = useState(false);
 
   const toggleButton = () => {
     setIsActive(!isActive);
   };
 
+  // convert in PDF:
   const componentRef = useRef(null);
 
   const handlePrint = useReactToPrint({
@@ -60,6 +62,10 @@ function Exercises() {
                   <input
                     name={`repetitions`}
                     type="number"
+                    min="1"
+                    max="100"
+                    step="1"
+                    placeholder="0"
                     id="repetitions"
                     value={exercises[index]["repetitions"]}
                     onChange={(e) => handleChangeInput(e, index)}
@@ -70,14 +76,23 @@ function Exercises() {
                     name={`weight`}
                     type="number"
                     id="weight"
+                    min="0"
+                    max="500"
+                    step="1"
+                    placeholder="0"
                     value={exercises[index]["weight"]}
                     onChange={(e) => handleChangeInput(e, index)}
+                    // ref={inputRef}
                   />
 
                   <label>Choose an interval (in seconds)</label>
                   <input
                     name={`interval`}
                     type="number"
+                    min="1"
+                    max="90"
+                    step="1"
+                    placeholder="0"
                     id="interval"
                     value={exercises[index]["interval"]}
                     onChange={(e) => handleChangeInput(e, index)}
