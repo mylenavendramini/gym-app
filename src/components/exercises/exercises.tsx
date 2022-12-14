@@ -14,7 +14,7 @@ export interface InputData {
   interval: Number | any;
 }
 
-function ExercisesCopy() {
+function Exercises() {
   const { workoutId } = useParams();
   const workout = getWorkout(workoutId);
 
@@ -104,4 +104,4 @@ function ExercisesCopy() {
   );
 }
 
-export default ExercisesCopy;
+export default Exercises;

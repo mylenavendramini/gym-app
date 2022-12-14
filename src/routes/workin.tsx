@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Exercise from "../components/exercise/exercise";
-
 import Exercises from "../components/exercises/exercises";
 
 const WorkIn = () => {

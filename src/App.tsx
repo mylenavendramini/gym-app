@@ -1,10 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Contact from "./components/contact/contact";
 import Exercise from "./components/exercise/exercise";
 import CreateWorkout from "./components/exercises/create-workout";
 import Home from "./components/home/home";
-
 import Work from "./routes/work";
 import WorkIn from "./routes/workin";
 
