@@ -1,9 +1,9 @@
-import { ChangeEvent, useState, useRef, useEffect, WheelEvent } from "react";
+import { ChangeEvent, useState, useRef } from "react";
 import { ExercisesContainer, ExercisesReady } from "./exercises.styles";
 import { getWorkout } from "../../gym.database";
 import { useParams } from "react-router-dom";
 
-import { useReactToPrint } from "react-to-print";
+// import { useReactToPrint } from "react-to-print";
 import ComponentToPrint from "./componenttoprint";
 
 export interface InputData {
@@ -40,9 +40,9 @@ function Exercises() {
   // convert in PDF:
   const componentRef = useRef(null);
 
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-  });
+  // const handlePrint = useReactToPrint({
+  //   content: () => componentRef.current,
+  // });
 
   return (
     <div>
@@ -106,7 +106,7 @@ function Exercises() {
         <div className={isActive ? "active" : "not-active"}>
           <ExercisesReady>
             <button onClick={toggleButton}>Go back</button>
-            <button onClick={handlePrint}>Convert to PDF</button>
+            {/*<button onClick={handlePrint}>Convert to PDF</button>*/}
             <ComponentToPrint
               ref={componentRef}
               exercises={exercises}
